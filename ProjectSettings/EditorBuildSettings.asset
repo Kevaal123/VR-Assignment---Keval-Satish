@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 99d04e94f78db19429a486203c1abe68
+  - enabled: 1
+    path: Assets/Scenes/BowlingAlley.unity
+    guid: deb4c779f6941d54290cc19808885290
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ff5c7d2f40398cb4a8b9249cecb37e0a,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bd5c9651049dd5a4ea173b196bcf5089,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 32c6ea9ff936ab74eb33fbeeb8c4bff4,
+      type: 2}
