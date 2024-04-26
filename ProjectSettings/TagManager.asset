@@ -9,6 +9,7 @@ TagManager:
   - Left Hand
   - Right Hand
   - Ground
+  - Nametag
   layers:
   - Default
   - TransparentFX

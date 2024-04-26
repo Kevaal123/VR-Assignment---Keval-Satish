@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class ToggleObjectNames : MonoBehaviour
 {
-    public GameObject[] objectsWithLabels; // Array of objects with labels
     private bool areLabelsVisible = true; // Flag to track label visibility
 
     private void Start()
     {
-        // Initially, set all object labels to be visible
-        foreach (GameObject obj in objectsWithLabels)
-        {
-            obj.SetActive(true);
-        }
+        // Initially, set all objects with the tag "NameTag" to be visible
+        ToggleObjectsWithTag("Nametag", true);
     }
 
     public void ToggleLabels()
@@ -23,9 +19,16 @@ public class ToggleObjectNames : MonoBehaviour
         areLabelsVisible = !areLabelsVisible;
 
         // Set label visibility based on the flag
-        foreach (GameObject obj in objectsWithLabels)
+        ToggleObjectsWithTag("Nametag", areLabelsVisible);
+    }
+
+    // Function to toggle objects with a specific tag
+    private void ToggleObjectsWithTag(string tag, bool isActive)
+    {
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject obj in objectsWithTag)
         {
-            obj.SetActive(areLabelsVisible);
+            obj.SetActive(isActive);
         }
     }
 }
